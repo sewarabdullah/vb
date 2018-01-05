@@ -1,0 +1,33 @@
+<!-- إستبدل محتوى القالب بالكود التالي - بداية الكود -->
+<!-- by: Mkani.com -->
+<p>
+<table class="tborder" cellpadding="$stylevar[cellpadding]" cellspacing="$stylevar[cellspacing]" border="0" width="100%" align="center">
+<tbody>
+<tr>
+<td class="tcat" colspan="<if condition="$vboptions[showmoderatorcolumn]">6<else />5</if>">
+<a style="float:$stylevar[right]" href="#top" onclick="return toggle_collapse('forumbit_$forumid')"><img id="collapseimg_forumbit_$forumid" src="$stylevar[imgdir_button]/collapse_tcat{$collapseimg_forumid}.gif" alt="" border="0" /></a>
+<a href="forumdisplay.php?$session[sessionurl]f=$forum[forumid]">$forum[title]</a>
+<if condition="$show['forumdescription']"><div class="smallfont">$forum[description]</div></if>
+<if condition="$show['subforums']"><div class="smallfont"><strong>$vbphrase[subforums]</strong>: $forum[subforums]</div></if>
+</td>
+</tr>
+</tbody>
+<if condition="$childforumbits">
+<tbody id="collapseobj_forumbit_$forumid" style="{$collapseobj_forumid}">
+	<tr align="center">
+<td class="thead" width="5%">&nbsp;</td>
+<td class="thead" width="50%" align="$stylevar[left]">$vbphrase[forum]</td>
+<td class="thead" width="25%">$vbphrase[last_post]</td>
+<td class="thead" width="10%">$vbphrase[threads]</td>
+<td class="thead" width="10%">$vbphrase[posts]</td>
+<if condition="$vboptions['showmoderatorcolumn']">
+<td class="thead" width="0%">$vbphrase[moderator]</td>
+</if>
+</tr>
+$childforumbits
+<tr><td class="thead" style="line-height: 0; padding: 0; margin: 0;" colspan="<if condition="$vboptions[showmoderatorcolumn]">6<else />5</if>"><img src="$vboptions[cleargifurl]" alt="" width="1" height="12" /></td></tr>
+</tbody>
+</if>
+</table>
+<!-- /by: Mkani.com -->
+<!-- /إستبدل محتوى القالب بالكود التالي - نهاية الكود -->
